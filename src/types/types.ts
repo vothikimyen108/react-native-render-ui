@@ -31,11 +31,6 @@ interface Accordion {
     isOpen: boolean
 }
 
-interface col {
-    id: string,
-    title: string,
-}
-
 interface Product {
     id: string,
     name: string,

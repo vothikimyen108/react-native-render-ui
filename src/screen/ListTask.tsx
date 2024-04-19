@@ -10,6 +10,7 @@ const Tab = createMaterialTopTabNavigator();
 const ListTask = () => {
   const [text, setText] = useState("");
   const [data, setData] = useState<Task[]>(DataTasksAll);
+  
   const searchTasks = (searchTerm: string): Task[] => {
     searchTerm = searchTerm.toLowerCase().trim();
     return DataTasksAll.filter(

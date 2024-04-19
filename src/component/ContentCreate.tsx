@@ -10,7 +10,7 @@ import {
   Text,
 } from "react-native";
 import { AccordionItem } from "react-native-accordion-list-view";
-import { iconCheckDone, iconArrowDown } from "../icon";
+import { iconCheckDone, iconArrowDown, iconExpand } from "../icon";
 import { DataNote } from "../data/data";
 import Table from "./Table";
 
@@ -67,6 +67,15 @@ const ContentCreate = () => {
               numberOfLines={4}
               maxLength={40}
             />
+          </View>
+          <View style={stylesAccordion.viewTable}>
+            <View>
+                <Text style={stylesAccordion.textTable}>Bảng kê chi tiết</Text>
+                <Text style={stylesAccordion.subTitle}>Mô tả bảng</Text>
+            </View>
+            <View>
+                {iconExpand({width:"20", height:"20"})}
+            </View>
           </View>
           <Table></Table>
         </View>
@@ -184,8 +193,19 @@ const stylesAccordion = StyleSheet.create({
     borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
-    // marginRight: 16
   },
+  viewTable: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginVertical: 12,
+  },
+  textTable: {
+    color: 'rgba(207, 21, 52, 1)',
+    lineHeight: 20,
+    fontSize: 14,
+    fontWeight: '600'
+  }
 });
 
 export default ContentCreate;
