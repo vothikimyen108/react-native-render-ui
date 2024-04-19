@@ -10,9 +10,9 @@ import Process from "../component/Process";
 const Tab = createMaterialTopTabNavigator();
 
 const DetailTask = ({ route, navigation }) => {
-    const { itemId} = route.params;
-    const item: Task = DataTasksAll.find( item => item.id === itemId);
-      
+    const { itemId } = route.params;
+    const item: Task = DataTasksAll.find(item => item.id === itemId);
+
     const handleOnPress = () => {
         navigation.navigate("CreateTask")
     }

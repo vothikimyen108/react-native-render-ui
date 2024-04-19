@@ -37,9 +37,9 @@ interface col {
 }
 
 interface Product {
-   id: string,
-   name: string,
-   code: string
+    id: string,
+    name: string,
+    code: string
 }
 
 interface Columns {

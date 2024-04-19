@@ -70,7 +70,7 @@ const Table = () => {
       return renderItem(item);
     }))
   }
-  
+
   return (<ScrollView style={styles.container} nestedScrollEnabled>
     <ScrollView horizontal>
       <View style={styles.table}>
