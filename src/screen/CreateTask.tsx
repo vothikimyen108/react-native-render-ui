@@ -1,8 +1,7 @@
 import { View, Text, StyleSheet, Pressable } from "react-native"
-import MyTabBar from "../component/MyTabBar";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import ContentCreate from "../component/ContentCreate";
-import InfoTask from "../component/InfoTask";
+import { ContentCreate, InfoTask, MyTabBar } from "../component";
+
 
 const Tab = createMaterialTopTabNavigator();
 

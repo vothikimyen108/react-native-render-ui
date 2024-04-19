@@ -1,16 +1,15 @@
 import { View, StyleSheet, TextInput, Text } from "react-native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import MyTabBar from "../component/MyTabBar";
-import Tasks from "../component/Tasks";
 import { iconSearch } from "../icon";
 import { useEffect, useState } from "react";
 import { DataTasksAll } from "../data/data";
+import { MyTabBar, Tasks } from "../component";
 const Tab = createMaterialTopTabNavigator();
 
 const ListTask = () => {
   const [text, setText] = useState("");
   const [data, setData] = useState<Task[]>(DataTasksAll);
-  
+
   const searchTasks = (searchTerm: string): Task[] => {
     searchTerm = searchTerm.toLowerCase().trim();
     return DataTasksAll.filter(
@@ -50,6 +49,7 @@ const ListTask = () => {
       </Tab.Navigator>
     </View>
   );
+
 };
 
 const styles = StyleSheet.create({

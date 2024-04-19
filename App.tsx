@@ -2,11 +2,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import ListTask from './src/screen/ListTask';
-import Home from './src/screen/Home';
-import Header from './src/component/Header';
-import DetailTask from './src/screen/DetailTask';
-import CreateTask from './src/screen/CreateTask';
+import { CreateTask, DetailTask, Home, ListTask } from './src/screen';
+import { Header } from './src/component';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,8 +30,10 @@ export default function App() {
           {/* Configure Home screen */}
           <Stack.Screen name="Home" component={Home} options={{ title: "Home" }}
           />
+          {/* Configure Detail task screen */}
           <Stack.Screen name="Detail" component={DetailTask} options={{ title: "Quy trình đánh giá thử việc" }}
           />
+          {/* Configure create a task screen */}
           <Stack.Screen name="CreateTask" component={CreateTask} options={{ title: "Tạo Phiếu" }}
           />
         </Stack.Navigator>
