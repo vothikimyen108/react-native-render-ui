@@ -49,7 +49,6 @@ const ListTask = () => {
       </Tab.Navigator>
     </View>
   );
-
 };
 
 const styles = StyleSheet.create({

@@ -7,11 +7,11 @@ import {
 } from "react-native";
 import Task from "./Task";
 
-type tasksProps = {
+type TasksProps = {
   listTask: Task[];
 };
 
-const Tasks = ({ listTask }: tasksProps) => {
+const Tasks = ({ listTask }: TasksProps) => {
   return (
     <View style={{ flex: 1 }}>
       <SafeAreaView style={styles.container}>
@@ -26,6 +26,7 @@ const Tasks = ({ listTask }: tasksProps) => {
     </View>
   );
 };
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
