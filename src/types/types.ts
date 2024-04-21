@@ -18,6 +18,7 @@ interface Process {
     mainTitle: string,
     user: string,
     topTitle: string,
+    listProcess?: Process[]
 }
 
 interface Note {

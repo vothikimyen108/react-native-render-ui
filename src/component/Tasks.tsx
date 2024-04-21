@@ -30,7 +30,7 @@ const Tasks = ({ listTask }: TasksProps) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginVertical: 12,
+    paddingVertical: 10,
     backgroundColor: "rgba(245, 247, 250, 1)",
   },
   item: {

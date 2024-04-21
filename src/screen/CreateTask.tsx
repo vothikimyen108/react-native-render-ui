@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(245, 247, 250, 1)",
     width: "100%",
     height: "100%",
-    paddingHorizontal: 16,
+    // paddingHorizontal: 16,
     position: "relative",
   },
   subHeader: {

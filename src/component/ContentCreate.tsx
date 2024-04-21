@@ -70,12 +70,10 @@ const ContentCreate = () => {
           </View>
           <View style={stylesAccordion.viewTable}>
             <View>
-                <Text style={stylesAccordion.textTable}>Bảng kê chi tiết</Text>
-                <Text style={stylesAccordion.subTitle}>Mô tả bảng</Text>
+              <Text style={stylesAccordion.textTable}>Bảng kê chi tiết</Text>
+              <Text style={stylesAccordion.subTitle}>Mô tả bảng</Text>
             </View>
-            <View>
-                {iconExpand({width:"20", height:"20"})}
-            </View>
+            <View>{iconExpand({ width: "20", height: "20" })}</View>
           </View>
           <Table></Table>
         </View>
@@ -103,31 +101,33 @@ const ContentCreate = () => {
     <SafeAreaView style={stylesAccordion.container}>
       <ScrollView>
         {DataNote.map((item) => (
-          <AccordionItem
-            key={item.id.toString()}
-            customTitle={() => customTitle(item)}
-            customBody={() => customBody()}
-            customIcon={() => customIcon(item)}
-            animationDuration={400}
-            isOpen={false}
-            onPress={(isOpen) => {
-              const openAccordionItem = listAccordion;
-              const index = openAccordionItem.findIndex(
-                (i) => i.id === item.id
-              );
-              openAccordionItem[index].isOpen = isOpen;
-              setListAccordion(openAccordionItem);
-            }}
-            containerStyle={stylesAccordion.viewContainerStyle}
-            pressableProps={{
-              style: ({ pressed }) => [
-                {
-                  marginVertical: 10,
-                  marginHorizontal: 16,
-                },
-              ],
-            }}
-          />
+          <View style={stylesAccordion.containerItem}>
+            <AccordionItem
+              key={item.id.toString()}
+              customTitle={() => customTitle(item)}
+              customBody={() => customBody()}
+              customIcon={() => customIcon(item)}
+              animationDuration={400}
+              isOpen={false}
+              onPress={(isOpen) => {
+                const openAccordionItem = listAccordion;
+                const index = openAccordionItem.findIndex(
+                  (i) => i.id === item.id
+                );
+                openAccordionItem[index].isOpen = isOpen;
+                setListAccordion(openAccordionItem);
+              }}
+              containerStyle={stylesAccordion.viewContainerStyle}
+              pressableProps={{
+                style: ({ pressed }) => [
+                  {
+                    marginVertical: 5,
+                    marginHorizontal: 16,
+                  },
+                ],
+              }}
+            />
+          </View>
         ))}
       </ScrollView>
     </SafeAreaView>
@@ -141,7 +141,9 @@ const stylesAccordion = StyleSheet.create({
     height: "90%",
     paddingTop: 20,
   },
-
+  containerItem: {
+    paddingHorizontal: 16,
+  },
   titleStyle: {
     color: "#000",
   },
@@ -195,17 +197,17 @@ const stylesAccordion = StyleSheet.create({
     alignItems: "center",
   },
   viewTable: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
     marginVertical: 12,
   },
   textTable: {
-    color: 'rgba(207, 21, 52, 1)',
+    color: "rgba(207, 21, 52, 1)",
     lineHeight: 20,
     fontSize: 14,
-    fontWeight: '600'
-  }
+    fontWeight: "600",
+  },
 });
 
 export default ContentCreate;

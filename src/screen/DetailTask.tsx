@@ -1,6 +1,6 @@
 import { View, StyleSheet, Pressable, Text } from "react-native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { DataTasksAll } from "../data/data";
+import { DataProcess, DataTasksAll } from "../data/data";
 import { ItemTask, MyTabBar, Process } from "../component";
 
 const Tab = createMaterialTopTabNavigator();
@@ -20,7 +20,7 @@ const DetailTask = ({ route, navigation }) => {
           {() => <ItemTask item={item}></ItemTask>}
         </Tab.Screen>
         <Tab.Screen name="pro" options={{ title: "Quy trình xử lý" }}>
-          {() => <Process></Process>}
+          {() => <View style={styles.viewProcess}><Process data={DataProcess}></Process></View>}
         </Tab.Screen>
       </Tab.Navigator>
       <View style={styles.viewButton}>
@@ -39,6 +39,11 @@ const styles = StyleSheet.create({
     height: "100%",
     paddingHorizontal: 16,
     position: "relative",
+  },
+  viewProcess: {
+    backgroundColor: "rgba(245, 247, 250, 1)",
+    // height: '100%',
+    marginBottom: 70,
   },
   viewButton: {
     position: "absolute",

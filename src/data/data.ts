@@ -77,6 +77,36 @@ export const DataProcess: Process[] = [
     mainTitle: "Nhân viên tạo phiếu",
     user: "",
     topTitle: "",
+    listProcess: [
+      {
+        id: 10,
+        subTitle: "Bắt đầu",
+        mainTitle: "Nhân viên tạo phiếu",
+        user: "",
+        topTitle: "",
+      },
+      {
+        id: 20,
+        subTitle: "QLTT của người đề xuất xác nhận",
+        mainTitle: "Người xác nhận là",
+        user: "Hứa Thủ Vinh",
+        topTitle: "Vòng xác nhận",
+      },
+      {
+        id: 30,
+        subTitle: "QLTT của người đề xuất xác nhận",
+        mainTitle: "Người xác nhận là",
+        user: "Hứa Thủ Vinh",
+        topTitle: "Vòng xác nhận",
+      },
+      {
+        id: 40,
+        subTitle: "QLTT của người đề xuất xác nhận",
+        mainTitle: "Người xác nhận là",
+        user: "Hứa Thủ Vinh",
+        topTitle: "Vòng xác nhận",
+      },
+    ],
   },
   {
     id: 2,

@@ -1,19 +1,20 @@
 import { View, StyleSheet, SafeAreaView, FlatList } from "react-native";
 import ProcessCard from "./ProcessCard";
-import { DataProcess } from "../data/data";
 
-const Process = () => {
+interface ProcessProps {
+  data: Process[];
+}
+
+const Process: React.FC<ProcessProps> = ({ data }) => {
   return (
     <View style={styles.container}>
       <SafeAreaView>
         <FlatList
-          data={DataProcess}
+          data={data}
           renderItem={({ item, index }) => (
             <View>
               <ProcessCard item={item} />
-              {index < DataProcess.length - 1 && (
-                <View style={styles.div}></View>
-              )}
+              {index < data.length - 1 && <View style={styles.div}></View>}
             </View>
           )}
           keyExtractor={(item) => item.id.toString()}
@@ -25,9 +26,7 @@ const Process = () => {
 
 const styles = StyleSheet.create({
   container: {
-    height: "85%",
-    paddingTop: 10,
-    backgroundColor: "rgba(245, 247, 250, 1)",
+    backgroundColor: "transparent",
   },
   div: {
     backgroundColor: "rgba(208, 213, 221, 1)",
