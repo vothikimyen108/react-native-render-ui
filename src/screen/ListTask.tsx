@@ -4,24 +4,17 @@ import { iconSearch } from "../icon";
 import { useEffect, useState } from "react";
 import { DataTasksAll } from "../data/data";
 import { MyTabBar, Tasks } from "../component";
+import { searchTasks } from "../common/untit";
 const Tab = createMaterialTopTabNavigator();
 
 const ListTask = () => {
   const [text, setText] = useState<string>("");
   const [data, setData] = useState<Task[]>(DataTasksAll);
 
-  const searchTasks = (searchTerm: string): Task[] => {
-    searchTerm = searchTerm.toLowerCase().trim();
-    return DataTasksAll.filter(
-      (task) =>
-        task.title.toLowerCase().includes(searchTerm) ||
-        task.subTitle.toLowerCase().includes(searchTerm)
-    );
-  };
 
   useEffect(() => {
     if (text) {
-      setData(searchTasks(text));
+      setData(searchTasks(text, DataTasksAll));
     } else {
       setData(DataTasksAll);
     }
