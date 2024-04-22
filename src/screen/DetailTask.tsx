@@ -17,10 +17,10 @@ const DetailTask = ({ route, navigation }) => {
     <View style={styles.container}>
       <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
         <Tab.Screen name="info" options={{ title: "Thông tin" }}>
-          {() => <ItemTask item={item}></ItemTask>}
+          {() => <ItemTask item={item}/>}
         </Tab.Screen>
         <Tab.Screen name="pro" options={{ title: "Quy trình xử lý" }}>
-          {() => <View style={styles.viewProcess}><Process data={DataProcess}></Process></View>}
+          {() => <View style={styles.viewProcess}><Process data={DataProcess}/></View>}
         </Tab.Screen>
       </Tab.Navigator>
       <View style={styles.viewButton}>

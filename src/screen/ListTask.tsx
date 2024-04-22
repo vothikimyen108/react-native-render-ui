@@ -7,7 +7,7 @@ import { MyTabBar, Tasks } from "../component";
 const Tab = createMaterialTopTabNavigator();
 
 const ListTask = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState<string>("");
   const [data, setData] = useState<Task[]>(DataTasksAll);
 
   const searchTasks = (searchTerm: string): Task[] => {

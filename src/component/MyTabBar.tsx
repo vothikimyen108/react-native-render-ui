@@ -1,6 +1,6 @@
 import { Animated, View, TouchableOpacity, StyleSheet } from "react-native";
 
-const MyTabBar = ({ state, descriptors, navigation, position }) => {
+const MyTabBar = ({ state, descriptors, navigation }) => {
   return (
     <View style={styles.container}>
       {state.routes.map((route, index) => {

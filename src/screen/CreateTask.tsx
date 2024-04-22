@@ -10,12 +10,12 @@ const CreateTask = () => {
       <Text style={styles.subHeader}>
         Quy trình đề xuất tuyển dụng - Khối bán hàng
       </Text>
-      <Tab.Navigator tabBar={(props) => <MyTabBar {...props} />}>
+      <Tab.Navigator tabBar={(props) => <View style={styles.viewTab}><MyTabBar {...props} /></View>}>
         <Tab.Screen name="content" options={{ title: "Nội dung đề xuất" }}>
-          {() => <ContentCreate></ContentCreate>}
+          {() => <ContentCreate/>}
         </Tab.Screen>
         <Tab.Screen name="info" options={{ title: "Thông tin phiếu" }}>
-          {() => <InfoTask></InfoTask>}
+          {() => <InfoTask/>}
         </Tab.Screen>
       </Tab.Navigator>
       <View style={styles.viewButton}>
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(245, 247, 250, 1)",
     width: "100%",
     height: "100%",
-    // paddingHorizontal: 16,
     position: "relative",
   },
   subHeader: {
@@ -41,6 +40,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     lineHeight: 20,
     fontWeight: "400",
+    paddingHorizontal: 16,
   },
   viewButton: {
     position: "absolute",
@@ -64,6 +64,9 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     lineHeight: 24,
   },
+  viewTab: {
+    paddingHorizontal: 16,
+  }
 });
 
 export default CreateTask;

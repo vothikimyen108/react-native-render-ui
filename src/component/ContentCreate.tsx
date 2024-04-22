@@ -101,9 +101,8 @@ const ContentCreate = () => {
     <SafeAreaView style={stylesAccordion.container}>
       <ScrollView>
         {DataNote.map((item) => (
-          <View style={stylesAccordion.containerItem}>
+          <View style={stylesAccordion.containerItem} key={item.id.toString()}>
             <AccordionItem
-              key={item.id.toString()}
               customTitle={() => customTitle(item)}
               customBody={() => customBody()}
               customIcon={() => customIcon(item)}
